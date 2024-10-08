@@ -46,6 +46,9 @@ def home():
                     <h1>TEAM R.H.A.L</h1>
                     <h2>{title}</h2>
                     <p>Welcome to the official main server of Team R.H.A.L.</p>
+
+                    <img src="https://i.ibb.co/4Ty2rhs/asd.png" alt="Team R.H.A.L Logo">
+
                 </div>
             </body>
         </html>
