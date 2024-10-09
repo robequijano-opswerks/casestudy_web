@@ -4,8 +4,7 @@ metadata:
   name: web-app-ingress
 spec:
   rules:
-  - host: 143.42.79.220
-    http:
+  - http:
       paths:
       - path: /canary
         pathType: Prefix
