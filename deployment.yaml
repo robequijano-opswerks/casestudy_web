@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web-app-container
-        image: eywrld839/webapp:1.0
+        image: eywrld839/webapp:stable
         ports:
         - containerPort: 5000
 ---
@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: web-app-container
-        image: eywrld839/webapp:1.1
+        image: eywrld839/webapp:canary
         ports:
         - containerPort: 5000
 ---
