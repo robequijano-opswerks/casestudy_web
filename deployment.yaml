@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app-stable
+  name: web-app-latest
 spec:
   replicas: 5
   selector:
     matchLabels:
       app: web-app
-      version: stable
+      version: latest
   template:
     metadata:
       labels:
         app: web-app
-        version: stable
+        version: latest
     spec:
       containers:
       - name: web-app-container
-        image: eywrld839/webapp:stable
+        image: eywrld839/webapp:latest
         ports:
         - containerPort: 5000
 ---
