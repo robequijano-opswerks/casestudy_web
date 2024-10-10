@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -6,13 +7,16 @@ app = Flask(__name__)
 def home():
     title = "Welcome to the Main Server"
     
+    # Get the background color from the environment variable or use a default value
+    background_color = os.getenv('APP_COLOR', '#086c62')  # Default color if not set
+    
     return f'''
         <html>
             <head>
                 <title>{title}</title>
                 <style>
                     body {{
-                        background-color: #2c6fc3;
+                        background-color: {background_color};
                         font-family: Arial, sans-serif;
                         text-align: center;
                         padding: 50px;
