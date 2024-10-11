@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 app = Flask(__name__)
@@ -6,13 +7,16 @@ app = Flask(__name__)
 def home():
     title = "Welcome to the Canary Server"
     
+    # Get the background color from the environment variable or use a default value
+    canary_background_color = os.getenv('CANARY_APP_COLOR', '#2bbcbb')  # Default color for canary if not set
+    
     return f'''
         <html>
             <head>
                 <title>{title}</title>
                 <style>
                     body {{
-                        background-color: #2bbcbb;  /* Different background for the canary server */
+                        background-color: {canary_background_color};  /* Background for the canary server */
                         font-family: Arial, sans-serif;
                         text-align: center;
                         padding: 50px;
@@ -52,4 +56,4 @@ def home():
     '''
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)  # Different port for the canary server
+    app.run(host='0.0.0.0', port=5000)
