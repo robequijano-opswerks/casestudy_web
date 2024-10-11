@@ -19,6 +19,9 @@ spec:
         image: eywrld839/webapp:latest
         ports:
         - containerPort: 5000
+        env:
+          - name: APP_COLOR
+            value: ""
 ---
 apiVersion: apps/v1
 kind: Deployment
