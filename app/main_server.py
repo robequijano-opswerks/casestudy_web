@@ -8,7 +8,7 @@ def home():
     title = "Welcome to the Main Server"
     
     # Get the background color from the environment variable or use a default value
-    background_color = os.getenv('APP_COLOR', '#086c62')  # Default color if not set
+    background_color = os.getenv('APP_COLOR', '#2c6fc3')  # Default color if not set
     
     return f'''
         <html>
